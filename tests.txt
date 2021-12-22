@@ -1,0 +1,96 @@
+Test Plan: Using the solve function to solve the maze and see if there is a
+           path from the start of the maze to the end. In order to get this
+           we use 3 different helper functions in our solve file to be
+           able to solve the maze.
+       1. endchecker: checks to see if the position matches with the
+                      position of the end of the maze, if so return true,
+                      otherwise return false.
+       2. neighbordetermine: checks the neighboring positions and
+                             determines whether the position is a valid
+                             position to be added to the path.
+       3. pathdetermine: makes the 4 neighboring positions and have it run
+                         through the neighbordetermine function.
+
+We will test through a couple of mazes to make sure that the solutions are
+produced properly and if there is no end then it prints nothing.
+
+Script started on 2021-12-05 20:43:46-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+even MazeSolving$ make clean
+rm -f solve *.o *~ core*
+even MazeSolving$ make
+clang -I/home/walker/MyroC/include -Wall -Werror -std=c11 -g  -c path.c
+clang -I/home/walker/MyroC/include -Wall -Werror -std=c11 -g  -c maze.c
+clang -I/home/walker/MyroC/include -Wall -Werror -std=c11 -g  -c queue.c
+clang -I/home/walker/MyroC/include -Wall -Werror -std=c11 -g  -c solve.c
+clang  -o solve path.o maze.o queue.o solve.o
+even MazeSolving$ ./solve < example.##[K1.txt
+0,21
+1,21
+2,21
+3,21
+3,20
+3,19
+4,19
+5,19
+5,18
+5,17
+4,17
+3,17
+3,16
+3,15
+4,15
+5,15
+5,14
+5,13
+5,12
+5,11
+5,10
+5,9
+6,9
+7,9
+7,10
+7,11
+7,12
+7,13
+8,13
+9,13
+10,13
+11,13
+11,14
+11,15
+11,16
+11,17
+11,18
+11,19
+11,20
+11,21
+12,21
+even MazeSolving$ ./solve < short1.txt
+0,1
+1,1
+2,1
+3,1
+4,1
+even MazeSolving$ ./solve < short2.txt
+0,1
+1,1
+1,2
+2,2
+3,2
+3,1
+4,1
+even MazeSolving$ ./solve < shortnoend.txt
+Error in maze input: No end position denotedeven MazeSolving$ 
+even MazeSolving$ ./solve  ##[K< nullmaze.txt
+Error in maze input: No start position denotedeven MazeSolving$ 
+even MazeSolving$ exit
+exit
+
+Script done on 2021-12-05 20:44:53-06:00 [COMMAND_EXIT_CODE="0"]
+
+
+Explanation:
+The output of every valid maze is given accurate paths that lead to the end
+of the maze and the mazes that are null or no start or end is given the
+error that it is not a valid maze. All testing results match predicted
+results, therefore the program is correct. 

@@ -1,0 +1,16 @@
+﻿Academic honesty certification:
+  Written/online sources used:
+    CS Reading (Pointers and Memory Allocation Reading):
+       https://weinman.cs.grinnell.edu/courses/CSC161/2021F/modules/lists/readings/pointers-malloc.shtml
+    Project 5 (clear function Kier and I made for movie manipulation project):
+       https://www.gradescope.com/courses/284129/assignments/1434651/submissions/101770026
+  Help obtained
+    Weinman:
+       Looked at piazza to see the explanations for my error codes from
+       autograder and questions related to solve that other students have
+       asked.
+  My initials below confirm that the above list of sources
+  is complete AND that I have not talked to anyone else
+  (e.g., CSC 161 students) about the solution to this problem 
+ 
+   Initials:  DK
